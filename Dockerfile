@@ -13,6 +13,6 @@ FROM openjdk:17.0-oracle
 
 WORKDIR /app
 
-COPY --from=builder /app/build/*.jar .
+COPY --from=builder /app/build/libs/*.jar .
 
 CMD ["java", "-jar", "/app/kotlin-starter-1.0.jar"]
