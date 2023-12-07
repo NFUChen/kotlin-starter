@@ -1,0 +1,9 @@
+version: '3.3'
+services:
+  kotlin-starter:
+    container_name: kotlin-starter
+    restart: always
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    tty: true 

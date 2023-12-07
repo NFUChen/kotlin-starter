@@ -39,3 +39,7 @@ tasks.jar {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 
 }
+
+tasks.register("install") {
+    dependsOn("dependencies", "install")
+}
