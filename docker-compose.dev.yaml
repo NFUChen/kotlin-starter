@@ -2,7 +2,6 @@ version: '3.3'
 services:
   kotlin-starter-dev:
     container_name: kotlin-starter-dev
-    restart: no
     build: 
       context: .
       dockerfile: Dockerfile.dev
