@@ -22,14 +22,16 @@ kotlin {
     jvmToolchain(17)
 }
 
+val mainClassName = "MainKt"
+
 application {
-    mainClass.set("MainKt")
+    mainClass.set(mainClassName)
 }
 
-val mainClass = "MainKt"
+
 
 tasks.jar {
-    manifest.attributes["Main-Class"] = mainClass
+    manifest.attributes["Main-Class"] = mainClassName
     val dependencies = configurations.runtimeClasspath.get().map {
         zipTree(it)
     }
